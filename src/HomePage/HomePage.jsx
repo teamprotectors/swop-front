@@ -135,38 +135,33 @@ class HomePage extends React.Component {
             <>
                 <div className={'row'}>
                     <div className="col-md-10 col-sm-offset-2">
-                        <h1>Hi {user.firstName}!</h1>
+                        <h1>Hola {user.firstName}!</h1>
                         <p>
-                            <Link to="/login">Logout</Link>
+                            <Link to="/login">Cerrar sesión</Link>
                         </p>
                         {users.loading && <div><em>Loading users...</em>
                             <label>Error: </label>{users.error &&
                             <span className="text-danger">ERROR: {users.error}</span>}
                         </div>}
                         <div className={'col-xs-6'}>
-                            <h3>Your basic data is:</h3>
-                            <div><label>First name: </label>{user.firstName &&
+                            <h3>Tu información básica es:</h3>
+                            <div><label>Nombre: </label>{user.firstName &&
                             <span className="text-danger"> {user.firstName}</span>}</div>
-                            <div><label>Last name: </label>{user.lastName &&
+                            <div><label>Apellido: </label>{user.lastName &&
                             <span className="text-danger"> {user.lastName}</span>}</div>
-                            <div><label>Username: </label>{user.username &&
+                            <div><label>Usuario: </label>{user.username &&
                             <span className="text-danger"> {user.username}</span>}</div>
-                            <div><label>Age: </label>{user.age && <span className="text-danger"> {user.age}</span>}
+                            <div><label>Edad: </label>{user.age && <span className="text-danger"> {user.age}</span>}
                             </div>
-                            <div><label>Occupation: </label>{user.occupation &&
+                            <div><label>Ocupación: </label>{user.occupation &&
                             <span className="text-danger"> {user.occupation}</span>}</div>
                         </div>
                         <div className={'col-xs-6'}>
-                            <h3>Your location data is:</h3>
-                            <div><label>Adress: </label>{user.adress &&
-                            <span className="text-danger"> {user.adress}</span>}
-                            </div>
-                            <div><label>Country: </label>{user.country &&
+                            <h3>Tu informacion ubicación es:</h3>
+                            <div><label>País: </label>{user.country &&
                             <span className="text-danger"> {user.country}</span>}</div>
-                            <div><label>City: </label>{user.city && <span className="text-danger"> {user.city}</span>}
+                            <div><label>Ciudad: </label>{user.city && <span className="text-danger"> {user.city}</span>}
                             </div>
-                            <div><label>Zip code: </label>{user.zipCode &&
-                            <span className="text-danger"> {user.zipCode}</span>}</div>
                         </div>
                     </div>
                 </div>
@@ -195,7 +190,7 @@ class HomePage extends React.Component {
                                                 finalFormProps.form.mutators,
                                                 cart,
                                                 this.props.addSwopCart)}>
-                                        Add to cart
+                                        Agregar al carrito de truque
                                     </Button>
                                 </form>
                             );

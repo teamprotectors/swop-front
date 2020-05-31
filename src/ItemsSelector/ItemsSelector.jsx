@@ -12,7 +12,7 @@ const ItemsSelector = ({
                 <Field name="itemOffer">
                     {props => (
                         <div>
-                            <label>Select the product you want to offer: </label>
+                            <label>Seleciona el producto que quieres ofertar: </label>
                             <Select
                                 id={props.id}
                                 {...props.input}
@@ -33,13 +33,13 @@ const ItemsSelector = ({
                     <Field name="itemGet">
                         {props => (
                             <div>
-                                <label>Select the products you want to obtain: </label>
+                                <label>Producto que quieres cambiar: </label>
                                 <Select
                                     id={props.id}
                                     {...props.input}
                                     {...props.rest}
                                     options={itemsStock}
-                                    placeholder={'- Select -'}
+                                    placeholder={'- Seleccionar -'}
                                     noOptionsMessage={() => 'Values ​​not available'}
                                     isSearchable
                                     isMulti
@@ -52,14 +52,14 @@ const ItemsSelector = ({
                     <Field name="quantity">
                         {props => (
                             <div>
-                                <label>Select the products you want to obtain: </label>
+                                <label>Cantidad del producto que vas a ofertar: </label>
                                 <input
                                     id={props.id}
                                     {...props.input}
                                     {...props.rest}
                                     className="form-control form-control-lg"
                                     type="number"
-                                    placeholder="- Select - "
+                                    placeholder="- Seleccionar - "
                                 />
                             </div>
                         )}
