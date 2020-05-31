@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: swop-app
+spec:
+  selector:
+    matchLabels:
+      app: swop-app
+  template:
+    metadata:
+      labels:
+        app: swop-app
+    spec:
+      containers:
+      - name: swop-app
+        image: registry.gitlab.com/gsissa/image-registry-repo/swop-app:0.1.0-SNAPSHOT
+      imagePullSecrets:
+        - name: gitlab-registry
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: swop-app-svc
+spec:
+  type: NodePort
+  selector:
+    app: swop-app
+  ports:
+  - protocol: TCP
+    port: 80
+      
