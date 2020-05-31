@@ -4,37 +4,70 @@ import {Field} from "react-final-form";
 import Select from 'react-select'
 
 const ItemsSelector = ({
-                           item
+                           itemsStock, values
                        }) => {
     return (
-        <div className={'row'}>
-            <Field name="myField">
-                {props => (
-                    <div>
-                        <label>Seleccione el producto que desea ofertar: </label>
-                        <Select
-                            id={props.id}
-                            {...props.input}
-                            {...props.rest}
-                            options={item}
-                            placeholder={'- Selecciona -'}
-                            noOptionsMessage={() => 'Valores no disponibles'}
-                            isSearchable
-                        />
-                    </div>
-                )}
-            </Field>
-            {/*<Form>
-                    <Form.Group controlId={'ofertante'}>
-                        <Form.Label>
-                            Seleccione el producto que desea ofertar:
-                        </Form.Label>
-                        <Form.Control as="select">
-                            {Object.keys(item).map(i => <option value={item[0].name}>{item[0].name}</option>)}
-                        </Form.Control>
-                    </Form.Group>
-                </Form>*/}
-        </div>
+        <>
+            <div className={'row'}>
+                <Field name="itemOffer">
+                    {props => (
+                        <div>
+                            <label>Select the product you want to offer: </label>
+                            <Select
+                                id={props.id}
+                                {...props.input}
+                                {...props.rest}
+                                options={itemsStock}
+                                placeholder={'- Select -'}
+                                noOptionsMessage={() => 'Values ​​not available'}
+                                isSearchable
+                            />
+                        </div>
+                    )}
+                </Field>
+            </div>
+            <br/><br/>
+            {values.itemOffer &&
+            <>
+                <div className={'row'}>
+                    <Field name="itemGet">
+                        {props => (
+                            <div>
+                                <label>Select the products you want to obtain: </label>
+                                <Select
+                                    id={props.id}
+                                    {...props.input}
+                                    {...props.rest}
+                                    options={itemsStock}
+                                    placeholder={'- Select -'}
+                                    noOptionsMessage={() => 'Values ​​not available'}
+                                    isSearchable
+                                    isMulti
+                                />
+                            </div>
+                        )}
+                    </Field>
+                </div><br/><br/>
+                <div className={'row'}>
+                    <Field name="quantity">
+                        {props => (
+                            <div>
+                                <label>Select the products you want to obtain: </label>
+                                <input
+                                    id={props.id}
+                                    {...props.input}
+                                    {...props.rest}
+                                    className="form-control form-control-lg"
+                                    type="number"
+                                    placeholder="- Select - "
+                                />
+                            </div>
+                        )}
+                    </Field>
+                </div>
+            </>
+            }
+            <br/><br/></>
     );
 };
 
