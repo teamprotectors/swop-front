@@ -31,7 +31,7 @@ module.exports = {
         config: JSON.stringify({
             apiUrl: 'https://product-catalog-http-svc-dev-giovannysissa.cloud.okteto.net',
             apiCartUrl: 'https://swop-cart-http-svc-dev-giovannysissa.cloud.okteto.net',
-            apiUserUrl: 'https://users-http-svc-dev-giovannysissa.cloud.okteto.net/'
+            apiUserUrl: 'https://users-http-svc-dev-giovannysissa.cloud.okteto.net'
         })
     }
 }
