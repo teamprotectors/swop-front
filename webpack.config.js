@@ -3,7 +3,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     mode: 'development',
     resolve: {
-        extensions: ['.js', '.jsx']
+        extensions: ['.js', '.jsx', '.css']
     },
     module: {
         rules: [
@@ -29,7 +29,9 @@ module.exports = {
     externals: {
         // global app config object
         config: JSON.stringify({
-            apiUrl: 'http://localhost:8085'
+            apiUrl: 'https://product-catalog-http-svc-dev-giovannysissa.cloud.okteto.net',
+            apiCartUrl: 'https://swop-cart-http-svc-dev-giovannysissa.cloud.okteto.net',
+            apiUserUrl: 'https://users-http-svc-dev-giovannysissa.cloud.okteto.net/'
         })
     }
 }

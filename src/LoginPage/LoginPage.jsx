@@ -42,7 +42,8 @@ class LoginPage extends React.Component {
         return (
             <div className="col-md-6 col-md-offset-3">
                 <h2>Login for Swop</h2>
-                <form name="form" onSubmit={this.handleSubmit}>
+                <p>Aquí puedes intercambiar cualquier producto para cuidarte en éste tiempo de Covid 19</p>
+                <form className name="form" onSubmit={this.handleSubmit}>
                     <div className={'form-group' + (submitted && !username ? ' has-error' : '')}>
                         <label htmlFor="username">Username</label>
                         <input type="text" className="form-control" name="username" value={username} onChange={this.handleChange} />

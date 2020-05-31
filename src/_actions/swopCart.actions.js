@@ -5,7 +5,9 @@ import {swopCartConstants, userConstants} from "../_constants";
 export const swopCartActions = {
     register,
     addSwopCart,
-    deleteItemSwopCart
+    deleteItemSwopCart,
+    sendSwopCart,
+    getItemsStock
 };
 
 function register() {
@@ -60,4 +62,22 @@ function sendSwopCart(swopCart) {
     function pending() { return { type: swopCartConstants.PENDING_SEND_SWOPCART } }
     function success(item) { return { type: swopCartConstants.SEND_SWOPCART, item } }
     function failure(error) { return { type: swopCartConstants.ERROR_SEND_SWOPCART, error } }
+}
+
+function getItemsStock() {
+    return dispatch => {
+        swopCartService.getItemsStock()
+            .then(
+                getItems => {
+                    dispatch(success(getItems));
+                },
+                error => {
+                    dispatch(failure(error.toString()));
+                    dispatch(alertActions.error(error.toString()));
+                }
+            );
+    };
+
+    function success(getItems) { return { type: swopCartConstants.GET_ITEMS, getItems } }
+    function failure(error) { return { type: swopCartConstants.GET_ITEMS_ERROR, error } }
 }

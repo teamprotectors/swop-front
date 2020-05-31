@@ -1,4 +1,5 @@
 import {swopCartConstants} from '../_constants';
+import {REQUEST} from "../utils/Request";
 
 export function swopCart(state = {}, action) {
     switch (action.type) {
@@ -33,6 +34,16 @@ export function swopCart(state = {}, action) {
             return {
                 ...state,
                 stateSendSwopCart: REQUEST.ERROR
+            };
+        case swopCartConstants.GET_ITEMS:
+            return {
+                ...state,
+                getItems: action.getItems
+            };
+        case swopCartConstants.GET_ITEMS_ERROR:
+            return {
+                ...state,
+                getItems: undefined
             };
         default:
             return state

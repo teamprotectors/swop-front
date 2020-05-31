@@ -12,14 +12,14 @@ const ItemsSelector = ({
                 <Field name="itemOffer">
                     {props => (
                         <div>
-                            <label>Select the product you want to offer: </label>
+                            <label>Seleccione el producto a ofertar: </label>
                             <Select
                                 id={props.id}
                                 {...props.input}
                                 {...props.rest}
                                 options={itemsStock}
-                                placeholder={'- Select -'}
-                                noOptionsMessage={() => 'Values ​​not available'}
+                                placeholder={'- Seleccione -'}
+                                noOptionsMessage={() => 'Valores no disponibles'}
                                 isSearchable
                             />
                         </div>
@@ -33,14 +33,14 @@ const ItemsSelector = ({
                     <Field name="itemGet">
                         {props => (
                             <div>
-                                <label>Select the products you want to obtain: </label>
+                                <label>Seleccione los productos que desea obtener: </label>
                                 <Select
                                     id={props.id}
                                     {...props.input}
                                     {...props.rest}
                                     options={itemsStock}
-                                    placeholder={'- Select -'}
-                                    noOptionsMessage={() => 'Values ​​not available'}
+                                    placeholder={'- Seleccionar -'}
+                                    noOptionsMessage={() => 'Valores no disponibles'}
                                     isSearchable
                                     isMulti
                                 />
@@ -52,14 +52,14 @@ const ItemsSelector = ({
                     <Field name="quantity">
                         {props => (
                             <div>
-                                <label>Select the products you want to obtain: </label>
+                                <label>Cantidad: </label>
                                 <input
                                     id={props.id}
                                     {...props.input}
                                     {...props.rest}
                                     className="form-control form-control-lg"
                                     type="number"
-                                    placeholder="- Select - "
+                                    placeholder="- Seleccione - "
                                 />
                             </div>
                         )}
