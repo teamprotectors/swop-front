@@ -231,27 +231,27 @@ class HomePage extends React.Component {
                                         />
                                         <div className={'row'}>
                                             <div className={'col-sm-4 col-sm-offset-2'}>
-                                        <Button id="addToCart"
-                                                name="addToCart"
-                                                type="button"
-                                                onClick={() => this.handleSubmit(finalFormProps.values,
-                                                    user,
-                                                    itemsStock,
-                                                    finalFormProps.form.mutators,
-                                                    cart,
-                                                    this.props.addSwopCart)}>
-                                            Agregar
-                                        </Button>
+                                                <Button id="addToCart"
+                                                        name="addToCart"
+                                                        type="button"
+                                                        onClick={() => this.handleSubmit(finalFormProps.values,
+                                                            user,
+                                                            itemsStock,
+                                                            finalFormProps.form.mutators,
+                                                            cart,
+                                                            this.props.addSwopCart)}>
+                                                    Agregar
+                                                </Button>
                                             </div>
                                             <div className={'col-sm-4'}>
-                                        <Button id="addToCart"
-                                                name="addToCart"
-                                                type="button"
-                                                onClick={() => this.saveCart(
-                                                    cart,
-                                                    this.props.sendSwopCart)}>
-                                            Guardar carro
-                                        </Button>
+                                                <Button id="addToCart"
+                                                        name="addToCart"
+                                                        type="button"
+                                                        onClick={() => this.saveCart(
+                                                            cart,
+                                                            this.props.sendSwopCart)}>
+                                                    Guardar carro
+                                                </Button>
                                             </div>
                                         </div>
                                     </form>
